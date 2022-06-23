@@ -4,9 +4,24 @@
         <h2>Busquedas</h2>
         <hr>
         <ul class="list-group">
-            <li class="list-group-item">Buscar pais</li>
-            <li class="list-group-item">Por region</li>
-            <li class="list-group-item">Por capital</li>
+
+            <!-- rutas de angular 
+            1) routerLinkActiveOptions es necesario por el pathMatch full
+            2) routerLinkActive="active" es para que brille al dar click
+            3) routerLink="region" tiene que cuadrar con el path
+            -->
+            <li routerLink=""
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"  
+                class="list-group-item">Buscar pais</li> 
+
+            <li routerLink="region"
+                routerLinkActive="active"
+                class="list-group-item">Por region</li>
+
+            <li routerLink="capital"
+                routerLinkActive="active"
+                class="list-group-item"> Por capital</li>
         </ul>
     </div>
 
